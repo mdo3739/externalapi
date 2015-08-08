@@ -5,6 +5,7 @@ gem 'bootstrap-sass'
 gem 'puma'
 gem 'active_model_serializers'
 gem 'figaro'
+gem 'faker'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
