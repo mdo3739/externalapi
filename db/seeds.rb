@@ -1,20 +1,14 @@
 admin = User.new(
-  name: "Michael Do",
-  email: "admin@example.com",
-  password: "helloworld",
-  unencrypted_password: "boom"
+  username: "DoughBoi",
+  password: "helloworld"
 )
-admin.skip_confirmation!
 admin.save
 
 4.times do
   user = User.new(
-    name: Faker::Name.name,
-    email: Faker::Internet.safe_email,
-    password: Faker::Lorem.characters(10),
-    unencrypted_password: Faker::Lorem.word
+    username: Faker::Name.first_name,
+    password: Faker::Lorem.characters(10)
   )
-  user.skip_confirmation!
   user.save
 end
 
