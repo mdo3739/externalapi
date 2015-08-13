@@ -1,7 +1,8 @@
 admin = User.new(
   name: "Michael Do",
   email: "admin@example.com",
-  password: "helloworld"
+  password: "helloworld",
+  unencrypted_password: "boom"
 )
 admin.skip_confirmation!
 admin.save
@@ -10,7 +11,8 @@ admin.save
   user = User.new(
     name: Faker::Name.name,
     email: Faker::Internet.safe_email,
-    password: Faker::Lorem.characters(10)
+    password: Faker::Lorem.characters(10),
+    unencrypted_password: Faker::Lorem.word
   )
   user.skip_confirmation!
   user.save
